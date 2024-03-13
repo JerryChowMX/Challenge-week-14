@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Site</title>
+  <link rel="stylesheet" href="/css/styles.css"> <!-- Ensure you have a styles.css file or adjust the path as needed -->
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="/">Home</a>
+      {{#if logged_in}}
+      <a href="/dashboard">Dashboard</a>
+      <a href="/logout">Logout</a>
+      {{else}}
+      <a href="/login">Login</a>
+      <a href="/signup">Sign Up</a>
+      {{/if}}
+    </nav>
+  </header>
+
+  <main>
+    {{{body}}}
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Blog Site. All rights reserved.</p>
+  </footer>
+  <script src="/js/app.js"></script> <!-- Ensure you have an app.js or adjust the path as needed -->
+</body>
+
+</html>

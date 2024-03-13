@@ -1,0 +1,14 @@
+<article class="post">
+  <h3>{{title}}</h3>
+  <p>{{content}}</p>
+  <div class="post-meta">
+    <span>Posted by: {{user.username}}</span> |
+    <span>On: {{formatDate createdAt}}</span>
+  </div>
+  {{#if showControls}}
+  <div class="post-controls">
+    <button onclick="location.href='/posts/edit/{{id}}'">Edit</button>
+    <button onclick="handleDelete('{{id}}')">Delete</button>
+  </div>
+  {{/if}}
+</article>
